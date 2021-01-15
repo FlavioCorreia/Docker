@@ -15,8 +15,10 @@ docker run -p 8888:80 nome-imagem
 
 docker run -d -p 8888:80 nome-imagem
 	# -d => deixa o container executando com o terminal liberado
+	# d ( detached )
 
+docker stop nome-container
 
-
+docker start nome-container
 
 
