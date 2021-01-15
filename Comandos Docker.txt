@@ -1,0 +1,22 @@
+docker run -t ubuntu /bin/bash
+	#Abre o terminal da maquina dentro do container
+	#Ao sair do bash, o container para
+
+docker ps
+	#Informações sobre os containers em execução
+
+docker ps -a
+	#Todos os containers existentes
+
+docker run nome-imagem
+
+docker run -p 8888:80 nome-imagem
+	#Disponibiliza o acesso a uma porta dentro do container por meio de outra porta
+
+docker run -d -p 8888:80 nome-imagem
+	# -d => deixa o container executando com o terminal liberado
+
+
+
+
+
