@@ -1,16 +1,29 @@
 version: '3'
 services:
-    jenkins:
-        container_name: jenkins
-        build:
-            context: .
+    nginx:
+        image: nginx
+        port:
+            -8080:80 #toda vez que acessar a porta 8080 local, acesso a porta 80 do nginx
 
-        ports: 
-          - "8080:8080"
+    redis:
+        image: redis
+        expose: 
+            - 6379
 
-        volumes:
-          - ./docker/jenkins/:/var/jenkins_home
+###########################################################################################
 
+version: '3'
+services:
+    nginx:
+        image: nginx
+        volumes:        #compartilha a pasta local dentro do container
+            - ./nomePasta:/nomePastaNoContainer/queSeraSubstituida/ #caminho do mapeamento
+        port:
+            -8080:80    #toda vez que acessar a porta 8080 local, acesso a porta 80 do nginx
 
+    redis:
+        image: redis
+        expose: 
+            - 6379
 
 

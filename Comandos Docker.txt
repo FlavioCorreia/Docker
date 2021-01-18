@@ -1,6 +1,9 @@
-docker run -t ubuntu /bin/bash
+﻿docker run -t ubuntu /bin/bash
 	#Abre o terminal da maquina dentro do container
 	#Ao sair do bash, o container para
+
+docker run nomeImg:latest
+	#Executa
 
 docker ps
 	#Informações sobre os containers em execução
@@ -20,5 +23,76 @@ docker run -d -p 8888:80 nome-imagem
 docker stop nome-container
 
 docker start nome-container
+
+docker stop nome-container
+	#primeiro para o container
+	
+docker rm nome-container
+	#depois remove
+
+docker rm nome-container -f
+	#mata forçado
+
+
+docker ps -a -q
+	#retorna os ids dos containers
+
+docker rm $(docker ps -a -q) -f
+	#mata todos os containers
+
+docker images
+	#lista todas as imagens
+
+docker rmi nome-imagem
+	#remove a imagem (img ocupa mt espaço no hd)
+
+docker run -v pastaDesktop:pastaNoContainer
+	#faz um mapeamento de uma pasta local com uma do container
+
+###########################################################################################
+
+SITE
+labs play with docker
+​docker run wesleywillians/golang-exemplo-live:latest
+
+###########################################################################################
+
+docker-compose up
+	#sobe todo o docker-compose
+
+docker-compose up -d 
+	#detached para n perder o terminal
+
+docker exec -it nome-container bash
+	#abre o terminal do container
+
+docker-compose down
+	#desliga o container
+	#quando o container cai, alterações feitas nele são perdidas
+
+###########################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
