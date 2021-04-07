@@ -57,6 +57,8 @@ labs play with docker
 
 ###########################################################################################
 
+docker-compose up --build   <- ESSE É TOPZERA
+
 docker-compose up
 	#sobe todo o docker-compose
 
